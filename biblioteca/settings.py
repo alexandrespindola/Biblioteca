@@ -16,7 +16,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'biblioteca-pyot.onrender.com'
+    'biblioteca-pyot.onrender.com',
     'agenciadigital.ninja',
 ]
 
