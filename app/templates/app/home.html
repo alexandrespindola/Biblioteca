@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Página Inicial
+{% endblock %}
+
+{% block header %}
+<h1>Biblioteca Gnóstica - Hello World20</h1>
+{% endblock %}
+
+{% block content %}
+<button>
+  Clique em mim!
+</button>
+
+<section class="hero">
+  <div class="hero-body">
+    <h1 class="title">My Website</h1>
+    <p class="subtitle">A website built with Django and Bulma</p>
+  </div>
+</section>
+
+<div class="buttons">
+  <button class="button is-primary">Botão Primário</button>
+  <button class="button is-link">Botão Link</button>
+  <button class="button is-info">Botão Info</button>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <p class="title">Título do Cartão</p>
+    <p class="content">Conteúdo do cartão.</p>
+  </div>
+</div>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <img src="" alt="Logo">
+    </a>
+  </div>
+</nav>
+
+<form>
+  <div class="field">
+    <label class="label">Nome</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Seu nome">
+    </div>
+  </div>
+</form>
+
+{% endblock %}
+
+{% block footer %}
+<p>Gnosis 2024 - Ciência e Cultura do Homem em Busca do Ser</p>
+{% endblock %}
