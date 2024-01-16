@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+Confirmação de Registro
+{% endblock %}
+
+{% block header %}
+<h1>Registro concluído com sucesso</h1>
+{% endblock %}
+
+{% block content %}
+<p>Obrigado por se registrar. Estamos ansiosos para vê-lo no evento!</p>
+<a href="{% url 'eventos:registration' %}" class="button is-primary">Voltar para a página de inscrição</a>
+{% endblock %}
+
+{% block footer %}
+<p>Gnosis 2024 - Ciência e Cultura do Homem em Busca do Ser</p>
+{% endblock %}

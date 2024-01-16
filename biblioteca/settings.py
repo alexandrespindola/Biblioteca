@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'eventos',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,7 @@ DATABASES = {
         'PASSWORD': SUPABASE_PASSWORD,
         'HOST': 'db.ctmxifundhwesnhkfkif.supabase.co',
         'PORT': '5432',
+        'CONN_MAX_AGE': 0, 
     }
 }
 
