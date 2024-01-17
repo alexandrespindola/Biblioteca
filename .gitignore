@@ -2,12 +2,6 @@
 pycache/
 *.py[cod]
 
-# Python virtual environment files
-venv/
-*.venv/
-env/
-*.env/
-
 # Log files
 *.log
 
@@ -21,6 +15,7 @@ media/
 local_settings.py
 
 # Others
+.env
 npm-debug.log 
 logs/
 .DS_Store
