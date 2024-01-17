@@ -28,7 +28,7 @@ def registration(request):
                 'Obrigado por se inscrever no nosso evento!',
                 'dev@mercurioseo.com',
                 [participant.email],
-                fail_silently=False,
+                fail_silently=True,
             )
 
             return redirect('eventos:registration_complete') 

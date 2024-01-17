@@ -1,9 +1,5 @@
-#from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Book
-
-# def hello_world(request):
-#     return HttpResponse('Está funcionando!')
 
 def home(request):
     return render(request, 'app/home.html')
