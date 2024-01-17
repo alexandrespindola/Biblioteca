@@ -1,0 +1,15 @@
+@import 'bulma/bulma.sass';
+
+$cor-principal: #4753ff;
+
+body {
+    background-color: $cor-principal;
+}
+
+h1 {
+    background-color: yellow;
+}
+
+p {
+    font-weight: 900;
+}
