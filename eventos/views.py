@@ -5,6 +5,7 @@ from .models import Participant
 from .models import Event
 from .models import Registration
 from django.core.mail import send_mail
+from .models import send_confirmation_email
 
 @transaction.atomic()
 
@@ -24,13 +25,15 @@ def registration(request):
                 return render(request, 'eventos/inscricao.html', {'form': form, 'error': 'Desculpe, você não preenche as condições para inscrição no evento.'})
             participant.save()
 
-            send_mail(
-                'Confirmação de inscrição no evento',
-                'Obrigado por se inscrever no nosso evento!',
-                'dev@mercurioseo.com',
-                [participant.email],
-                fail_silently=False,
-            )
+            # send_mail(
+            #     'Confirmação de inscrição no evento',
+            #     'Obrigado por se inscrever no nosso evento!',
+            #     'dev@mercurioseo.com',
+            #     [participant.email],
+            #     fail_silently=False,
+            # )
+
+            send_confirmation_email(participant)
 
             return redirect('eventos:registration_complete') 
     else:

@@ -1,6 +1,5 @@
 from django.db import models
-
-from django.db import models
+from django.core.mail import send_mail
 
 class Event(models.Model):
     title = models.CharField(max_length=100)
@@ -38,9 +37,9 @@ class Registration(models.Model):
     def __str__(self):
         return f'{self.participant.first_name} - {self.event.title}'
 
-def send_confirmation_email(participant, event):
+def send_confirmation_email(participant):
     subject = 'Confirmação de inscrição no evento'
-    message = 'Olá {}!\n\nSua inscrição para o evento {} está confirmada!\n\nAguardamos você.\n\nAtenciosamente,\n\nEquipe MercurioSEO'.format(participant.first_name, event.title)
+    message = 'Olá {}!\n\nSua inscrição para o evento está confirmada!\n\nAguardamos você.\n\nAtenciosamente,\n\nEquipe MercurioSEO'.format(participant.first_name)
     from_email = 'dev@mercurioseo.com'
     to_email = [participant.email]
 
