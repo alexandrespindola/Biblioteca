@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: biblioteca
+    env: python
+    buildCommand: "pip install -r requirements.txt && npm install bulma"
+    startCommand: "gunicorn biblioteca.wsgi:application"
+    healthCheckPath: /
