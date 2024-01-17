@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'app',
     'eventos',
     'sass_processor',
-    'browser_reload'
 ]
 
 MIDDLEWARE = [
@@ -47,8 +46,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'browser_reload.middleware.BrowserReloadMiddleware',
-
 
 ]
 
