@@ -1,6 +1,6 @@
 @import 'bulma/bulma.sass';
 
-$cor-principal: #4dff47;
+$cor-principal: #0011ff;
 
 body {
     background-color: $cor-principal;
@@ -8,4 +8,8 @@ body {
 
 h1 {
     background-color: yellow;
+}
+
+p {
+    font-weight: 900;
 }
