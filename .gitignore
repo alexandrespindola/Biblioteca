@@ -1,21 +1,5 @@
-# Python cache files
-pycache/
-*.py[cod]
-
-# Log files
-*.log
-
-# User-uploaded media files (if storing media locally)
-media/
-
-# Compiled Sass files
-*.sass-cache/
-
-# Local configuration files
-local_settings.py
-
-# Others
 .env
-npm-debug.log 
+npm-debug.log
 logs/
+.sass-cache/
 .DS_Store
