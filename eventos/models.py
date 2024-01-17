@@ -24,6 +24,7 @@ class Participant(models.Model):
     last_name = models.CharField(max_length=100)
     age = models.IntegerField()
     address = models.CharField(max_length=200)
+    email = models.EmailField(max_length=254)
     resides_in_sp = models.BooleanField()
     time_confirmation = models.BooleanField()
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
