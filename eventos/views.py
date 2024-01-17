@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from .forms import ParticipantForm
 from .models import Participant
 from .models import Event
+from .models import Registration
 from django.core.mail import send_mail
 
 @transaction.atomic()
@@ -28,7 +29,7 @@ def registration(request):
                 'Obrigado por se inscrever no nosso evento!',
                 'dev@mercurioseo.com',
                 [participant.email],
-                fail_silently=True,
+                fail_silently=False,
             )
 
             return redirect('eventos:registration_complete') 

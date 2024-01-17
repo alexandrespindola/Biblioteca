@@ -37,3 +37,11 @@ class Registration(models.Model):
 
     def __str__(self):
         return f'{self.participant.first_name} - {self.event.title}'
+
+def send_confirmation_email(participant, event):
+    subject = 'Confirmação de inscrição no evento'
+    message = 'Olá {}!\n\nSua inscrição para o evento {} está confirmada!\n\nAguardamos você.\n\nAtenciosamente,\n\nEquipe MercurioSEO'.format(participant.first_name, event.title)
+    from_email = 'dev@mercurioseo.com'
+    to_email = [participant.email]
+
+    send_mail(subject, message, from_email, to_email, fail_silently=False)
