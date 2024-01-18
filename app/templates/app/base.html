@@ -7,25 +7,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-
-    {% comment %} <link type='text/css' rel="stylesheet" href="{% static 'app/styles.css' %}"> {% endcomment %}
     
     <link href="{% sass_src 'app/css/main.scss' %}" rel="stylesheet" type="text/css" />
-     {% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"> {% endcomment %}
+
+    <!-- CSS personalizado da página -->
+    {% block css %}{% endblock %}
+
+    <!-- Bootstrap Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!-- Bulma Modal FX -->
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+
 </head>
     
 <body>
-    <header>
-        {% block header %}{% endblock %}
-    </header>
+
+    {% include 'app/header.html' %}
 
     <main>
         {% block content %}{% endblock %}
     </main>
 
-    <footer>
-        <p>Gerenciador de eventos 2024</p>
-    </footer>
+    {% include 'app/footer.html' %}
     
     <script src="{% static 'app/js/script.js' %}"></script>
 

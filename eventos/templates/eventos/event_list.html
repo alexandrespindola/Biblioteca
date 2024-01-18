@@ -1,25 +1,7 @@
 {% extends 'app/base.html' %}
 
 {% block content %}
-<section class="section">
-    <div class="container">
-        <div class="columns is-multiline">
-            {% for event in events %}
-            <div class="column is-one-third">
-                <div class="card">
-                    <div class="card-content">
-                        <p class="title">{{ event.title }}</p>
-                        <p class="subtitle">{{ event.date }}</p>
-                        <div class="content">
-                            {{ event.description }}
-                        </div>
-                        <p>Vagas totais: {{ event.vacancies_limit }}</p>
-                        <a href="{% url 'eventos:registration' %}" class="button is-primary">Inscreva-se agora</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+
+{% include 'eventos/lista_de_eventos.html' %}
+
 {% endblock %}
