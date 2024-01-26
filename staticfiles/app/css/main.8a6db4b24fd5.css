@@ -7871,7 +7871,5 @@ html, body {
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19); }
 
 /*adds font awesome stars*/
-li a[href="/eventos"] {
+.tabs a:first-child {
   border-bottom-style: unset !important; }
-
-/*# sourceMappingURL=main.css.map */

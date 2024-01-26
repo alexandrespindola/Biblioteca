@@ -7874,4 +7874,8 @@ html, body {
 li a[href="/eventos"] {
   border-bottom-style: unset !important; }
 
-/*# sourceMappingURL=main.css.map */
+.events .title {
+  height: 5rem !important; }
+
+.is-rounded {
+  border-radius: 290486px !important; }

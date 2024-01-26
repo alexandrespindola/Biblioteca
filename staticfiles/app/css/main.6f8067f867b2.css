@@ -7874,4 +7874,5 @@ html, body {
 li a[href="/eventos"] {
   border-bottom-style: unset !important; }
 
-/*# sourceMappingURL=main.css.map */
+section .events p title {
+  min-height: auto !important; }

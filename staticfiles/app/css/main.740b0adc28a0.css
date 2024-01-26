@@ -7874,4 +7874,13 @@ html, body {
 li a[href="/eventos"] {
   border-bottom-style: unset !important; }
 
-/*# sourceMappingURL=main.css.map */
+.columns {
+  display: flex;
+  flex-wrap: wrap; }
+
+.equal-height {
+  display: flex;
+  flex-direction: column; }
+
+.card-content {
+  flex-grow: 1; }
