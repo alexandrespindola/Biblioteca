@@ -1,11 +1,14 @@
-{% extends 'app/base.html' %} {% load static %} {% block title %} Gerenciamento
-de Eventos {% endblock %} {% block content %}
+{% extends 'app/base.html' %} 
+
+{% block title %} Gerenciador de Eventos {% endblock %} 
+
+{% block content %}
 <section class="hero is-primary is-medium is-bold">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title is-1">Gerenciador de Eventos Prometeu</h1>
+      <h1 class="title is-1">Gerenciador de Eventos</h1>
       <h2 class="subtitle is-5">
-        Prometeu é uma aplicação web criada com Django para gerenciar e organizar eventos de forma prática e eficiente.
+        Aplicação web criada com Django para gerenciar e organizar eventos de forma prática e eficiente.
       </h2>
       <a href="{% url 'eventos:event_list' %}" class="button is-info"
         >Ver eventos</a
@@ -31,114 +34,18 @@ de Eventos {% endblock %} {% block content %}
     </div>
   </div>
   <div class="columns features is-flex-wrap-wrap">
-    {% include "app/components/card.html" with title="SASS" subtitle="CSS Preprocessor" description="SASS é um pré-processador CSS que permite o uso de variáveis, funções, herança e outras características que tornam o CSS mais eficiente e fácil de manter."%}
     
-    {% comment %} {% include "app/components/card.html" with title="SASS" subtitle="CSS Preprocessor" description="SASS é um pré-processador CSS que permite o uso de variáveis, funções, herança e outras características que tornam o CSS mais eficiente e fácil de manter." icon="apple" %} {% endcomment %}
-    
-    {% comment %} <div class="column is-4 is-flex">
-      <div class="card is-shady is-fullheight">
-        <div class="card-image has-text-centered">
-          <i class="fa fa-paw"></i>
-        </div>
-        <div class="card-content">
-          <div class="content">
-            <h3>Python</h3>
-            <h4>Language</h4>
-            <p>
-                Python é uma linguagem de programação de alto nível conhecida por sua sintaxe clara e legibilidade do código. Isso torna o desenvolvimento mais rápido e eficiente.
-            </p>
-            <p><a href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column is-4 is-flex">
-      <div class="card is-shady is-fullheight">
-        <div class="card-image has-text-centered">
-          <i class="fa fa-empire"></i>
-        </div>
-        <div class="card-content">
-          <div class="content">
-            <h3>Django</h3>
-            <h4>Backend Framework</h4>
-            <p>
-                Django é um framework de desenvolvimento web de alto nível que incentiva o desenvolvimento rápido, o design limpo e a abordagem pragmática.
-            </p>
-            </p>
-            <p><a href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column is-4 is-flex">
-      <div class="card is-shady is-fullheight">
-        <div class="card-image has-text-centered ">
-          <i class="fa fa-apple"></i>
-        </div>
-        <div class="card-content">
-          <div class="content">
-            <h3>SASS</h3>
-            <h4>CSS Preprocessor</h4>
-            <p>
-                SASS é um pré-processador CSS que permite o uso de variáveis, funções, herança e outras características que tornam o CSS mais eficiente e fácil de manter.
-            </p>
-            <p><a href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="columns features is-flex-wrap-wrap">
-        <div class="column is-4 is-flex">
-          <div class="card is-shady is-fullheight">
-            <div class="card-image has-text-centered">
-              <i class="fa fa-paw"></i>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                <h3>Bulma</h3>
-                <h4>CSS Framework</h4>
-                <p>
-                    Bulma, por outro lado, é um framework CSS baseado em Flexbox que fornece uma variedade de componentes prontos para usar, responsivos e reutilizáveis.
-                </p>
-                <p><a href="#">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-4 is-flex">
-          <div class="card is-shady is-fullheight">
-            <div class="card-image has-text-centered">
-              <i class="fa fa-empire"></i>
-            </div>
-            <div class="card-content is-flex">
-              <div class="content">
-                <h3>Supabase</h3>
-                <h4>Database (PostgreSQL)</h4>
-                <p>
-                    Supabase é uma alternativa de código aberto ao Firebase que usa PostgreSQL, um sistema de gerenciamento de banco de dados relacional poderoso e de código aberto. Ele fornece uma interface de usuário intuitiva e uma API RESTful para gerenciar seu banco de dados, além de recursos de tempo real e autenticação integrada.
-                </p>
-                </p>
-                <p><a href="#">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    <div class="column is-4 is-flex"> {% endcomment %}
-        <div class="card is-shady is-is-fullheight">
-          <div class="card-image has-text-centered">
-            <i class="fa fa-apple"></i>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <h3>Render</h3>
-              <h4>Server</h4>
-              <p>
-                  Render é uma plataforma de nuvem que permite implantar aplicativos web de maneira rápida e fácil. Ele suporta implantações automáticas a partir de repositórios Git e oferece uma variedade de serviços, como bancos de dados PostgreSQL gerenciados, armazenamento persistente e cron jobs.  
-              </p>
-              <p><a href="#">Learn more</a></p>
-            </div>
-          </div>
-        </div>
+    {% include "app/components/card.html" with title="Python" subtitle="Language" description="Python é uma linguagem de programação de alto nível conhecida por sua sintaxe clara e legibilidade do código. Isso torna o desenvolvimento mais rápido e eficiente. Além disso, Python tem um grande ecossistema de bibliotecas e frameworks, tornando-o uma escolha versátil para uma variedade de aplicações, desde desenvolvimento web até ciência de dados e aprendizado de máquina." logo_path='app/media/img/python.svg' logo_alt='Logo Python' %}
+
+    {% include "app/components/card.html" with title="Django" subtitle="Backend Framework" description='Django é um framework de desenvolvimento web de alto nível que incentiva o desenvolvimento rápido, o design limpo e a abordagem pragmática. Com uma arquitetura baseada em componentes reutilizáveis e uma filosofia de "baterias inclusas", o Django permite que os desenvolvedores criem aplicações robustas com menos código e em menos tempo.' logo_path='app/media/img/django.svg' logo_alt='Logo Django' %}
+
+    {% include "app/components/card.html" with title="Bulma" subtitle="CSS Framework" description="Bulma é um framework CSS baseado em Flexbox que fornece uma variedade de componentes prontos para usar, responsivos e reutilizáveis. Com sua sintaxe fácil de entender e personalização flexível, Bulma permite que os desenvolvedores criem interfaces de usuário modernas e atraentes com facilidade e eficiência." logo_path='app/media/img/bulma.svg' logo_alt='Logo Bulma' %}
+
+    {% include "app/components/card.html" with title="SASS" subtitle="CSS Preprocessor" description="SASS é um pré-processador CSS que permite o uso de variáveis, funções, herança e outras características que tornam o CSS mais eficiente e fácil de manter. Além disso, o SASS oferece uma estrutura mais organizada para escrever CSS, tornando o código mais legível e fácil de manter, especialmente para projetos maiores." logo_path='app/media/img/sass.svg' logo_alt='Logo SASS' %}
+
+    {% include "app/components/card.html" with title="Supabase" subtitle="Database (PostgreSQL)" description="Supabase é uma alternativa de código aberto ao Firebase que usa PostgreSQL, um sistema de gerenciamento de banco de dados relacional poderoso e de código aberto. Fornece uma interface de usuário intuitiva e uma API RESTful para gerenciar seu banco de dados, além de recursos de tempo real e autenticação integrada." logo_path='app/media/img/supabase.svg' logo_alt='Logo Supabase' %}
+
+    {% include "app/components/card.html" with title="Render" subtitle="Server" description="Render é uma plataforma de nuvem que permite implantar aplicativos web de maneira rápida e fácil. Ele suporta implantações automáticas a partir de repositórios Git e oferece uma variedade de serviços, como bancos de dados PostgreSQL gerenciados, armazenamento persistente e cron jobs." logo_path='app/media/img/render.svg' logo_alt='Logo Server' %}
       </div>
   </div>
 </section>

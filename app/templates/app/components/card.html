@@ -1,10 +1,15 @@
-<!-- card.html -->
+<!-- app/components/card.html -->
+{% load static %}
+
 <div class="column is-4 is-flex">
-  <div class="card is-shady is-fullheight">
+  <div class="card is-shady is-fullheight p-5">
     <div class="card-image has-text-centered">
+      <div class="is-flex is-justify-content-center is-align-items-center pt-5">
+          <img src="{% static logo_path %}" alt="{{ logo_alt }}" style="object-fit: contain; width: 120px; height: 120px">
+      </div>
     </div>
-    <div class="card-content">
-      <div class="content">
+    <div class="card-content p-0">
+        <div class="content">
         <h3>{{ title }}</h3>
         <h4>{{ subtitle }}</h4>
         <p>
