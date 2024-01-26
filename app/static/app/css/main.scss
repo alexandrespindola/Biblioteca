@@ -1,17 +1,48 @@
-$primary: #ff7a3c;
-$info: #1949e4;
-$success: #23d160;
-$warning: #ffdd57;
-$danger: #ff3860;
-$light: #f5f5f5;
-$dark: #4a4a4a;
-$black: #0a0a0a;
+// $primary: #ff7a3c;
+// $info: #1949e4;
+// $success: #23d160;
+// $warning: #ffdd57;
+// $danger: #ff3860;
+// $light: #f5f5f5;
+// $dark: #4a4a4a;
+// $black: #0a0a0a;
+// $white: #ffffff;
+// $grey: #4a4a4a;
+// $grey-light: #b5b5b5;
+// $grey-lighter: #dbdbdb;
+// $grey-dark: #7a7a7a;
+// $grey-darker: #363636;
+
+// Definindo as cores principais
+$dark-blue: #052f52; // Azul escuro 
+$gold: #c2ab6b; // Dourado
+$blue: #005bd1; // Azul
+$yellow: #f6de03; // Amarelo
+$red: #ff0000; // Vermelho
+$dark: #333333; // Preto escuro
+$light: #f4f4f4; // Branco claro
+
+// Definindo as cores do Bulma
+$grey-darker: #999999;
+$grey-dark: #b3b3b3;
+$grey: #cccccc;
+$grey-light: #e6e6e6;
+$grey-lighter: #f2f2f2;
 $white: #ffffff;
-$grey: #4a4a4a;
-$grey-light: #b5b5b5;
-$grey-lighter: #dbdbdb;
-$grey-dark: #7a7a7a;
-$grey-darker: #363636;
+$black: #000000;
+
+// Definindo as cores do tema
+$primary: $gold;
+$info: $dark-blue;
+$success: $blue;
+$warning: $yellow;
+$danger: $red;
+
+// Definindo as cores do texto
+$text: $dark;
+$text-invert: findColorInvert($text);
+$link: $primary;
+$link-invert: findColorInvert($link);
 
 $tablet: 769px;
 $desktop: 1024px;
@@ -87,16 +118,19 @@ margin: 10px;
 position: relative;
 transition: all .2s ease-in-out;
 }
+
 .is-shady:hover {
 box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
 }
 /*adds font awesome stars*/
-footer li:before {
-  content: '\f1b2';
-  font-family: 'FontAwesome';
-  float: left;
-  margin-left: -1.5em;
-  color: #147efb;
+// footer li:before {
+//   content: '\f1b2';
+//   font-family: 'FontAwesome';
+//   float: left;
+//   margin-left: -1.5em;
+//   color: #147efb;
+// }
+
+.tabs a {
+  border-bottom-style: unset !important;
 }
-
-

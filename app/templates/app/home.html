@@ -1,22 +1,16 @@
-{% extends 'app/base.html' %}
-{% load static %}
-
-{% block title %}
-Gerenciamento de Eventos
-{% endblock %}
-
-{% block content %}
-<section class="hero is-info is-medium is-bold">
+{% extends 'app/base.html' %} {% load static %} {% block title %} Gerenciamento
+de Eventos {% endblock %} {% block content %}
+<section class="hero is-primary is-medium is-bold">
   <div class="hero-body">
-      <div class="container has-text-centered">
-          <h1 class="title">
-          The new standard in &lt;insert industry here&gt;
-          </h1>
-          <h2 class="subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </h2>
-          <a href="{% url 'eventos:event_list' %}" class="button is-primary">Ver eventos</a>
-      </div>
+    <div class="container has-text-centered">
+      <h1 class="title is-1">Gerenciador de Eventos Prometeu</h1>
+      <h2 class="subtitle is-5">
+        Prometeu é uma aplicação web criada com Django para gerenciar e organizar eventos de forma prática e eficiente.
+      </h2>
+      <a href="{% url 'eventos:event_list' %}" class="button is-info"
+        >Ver eventos</a
+      >
+    </div>
   </div>
 </section>
 
@@ -24,54 +18,127 @@ Gerenciamento de Eventos
 
 <div class="box cta">
   <p class="has-text-centered">
-      <span class="tag is-primary">New</span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <span class="tag is-primary">HOT</span> Este projeto faz parte do Programa Match! Mastertech/IBM
   </p>
 </div>
 
 <section class="container">
-  <div class="columns features">
-      <div class="column is-4">
-          <div class="card is-shady">
-              <div class="card-image has-text-centered">
-                  <i class="fa fa-paw"></i>
-              </div>
-              <div class="card-content">
-                  <div class="content">
-                      <h4>Tristique senectus et netus et. </h4>
-                      <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                      <p><a href="#">Learn more</a></p>
-                  </div>
-              </div>
+  <div class="columns" style="margin-top: 5rem">
+    <div class="column has-text-centered">
+      <h2 class="subtitle is-3">
+        Confira as tecnologias utilizadas para criar este site
+      </h2>
+    </div>
+  </div>
+  <div class="columns features is-flex-wrap-wrap">
+    {% include "app/components/card.html" with title="SASS" subtitle="CSS Preprocessor" description="SASS é um pré-processador CSS que permite o uso de variáveis, funções, herança e outras características que tornam o CSS mais eficiente e fácil de manter."%}
+    
+    {% comment %} {% include "app/components/card.html" with title="SASS" subtitle="CSS Preprocessor" description="SASS é um pré-processador CSS que permite o uso de variáveis, funções, herança e outras características que tornam o CSS mais eficiente e fácil de manter." icon="apple" %} {% endcomment %}
+    
+    {% comment %} <div class="column is-4 is-flex">
+      <div class="card is-shady is-fullheight">
+        <div class="card-image has-text-centered">
+          <i class="fa fa-paw"></i>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <h3>Python</h3>
+            <h4>Language</h4>
+            <p>
+                Python é uma linguagem de programação de alto nível conhecida por sua sintaxe clara e legibilidade do código. Isso torna o desenvolvimento mais rápido e eficiente.
+            </p>
+            <p><a href="#">Learn more</a></p>
           </div>
+        </div>
       </div>
-      <div class="column is-4">
-          <div class="card is-shady">
-              <div class="card-image has-text-centered">
-                  <i class="fa fa-empire"></i>
-              </div>
-              <div class="card-content">
-                  <div class="content">
-                      <h4>Tempor orci dapibus ultrices in.</h4>
-                      <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
-                      sed risus.</p>
-                      <p><a href="#">Learn more</a></p>
-                  </div>
-              </div>
+    </div>
+    <div class="column is-4 is-flex">
+      <div class="card is-shady is-fullheight">
+        <div class="card-image has-text-centered">
+          <i class="fa fa-empire"></i>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <h3>Django</h3>
+            <h4>Backend Framework</h4>
+            <p>
+                Django é um framework de desenvolvimento web de alto nível que incentiva o desenvolvimento rápido, o design limpo e a abordagem pragmática.
+            </p>
+            </p>
+            <p><a href="#">Learn more</a></p>
           </div>
+        </div>
       </div>
-      <div class="column is-4">
-          <div class="card is-shady">
-              <div class="card-image has-text-centered">
-                  <i class="fa fa-apple"></i>
-              </div>
-              <div class="card-content">
-                  <div class="content">
-                      <h4> Leo integer malesuada nunc vel risus. </h4>
-                      <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                      <p><a href="#">Learn more</a></p>
-                  </div>
-              </div>
+    </div>
+    <div class="column is-4 is-flex">
+      <div class="card is-shady is-fullheight">
+        <div class="card-image has-text-centered ">
+          <i class="fa fa-apple"></i>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <h3>SASS</h3>
+            <h4>CSS Preprocessor</h4>
+            <p>
+                SASS é um pré-processador CSS que permite o uso de variáveis, funções, herança e outras características que tornam o CSS mais eficiente e fácil de manter.
+            </p>
+            <p><a href="#">Learn more</a></p>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns features is-flex-wrap-wrap">
+        <div class="column is-4 is-flex">
+          <div class="card is-shady is-fullheight">
+            <div class="card-image has-text-centered">
+              <i class="fa fa-paw"></i>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <h3>Bulma</h3>
+                <h4>CSS Framework</h4>
+                <p>
+                    Bulma, por outro lado, é um framework CSS baseado em Flexbox que fornece uma variedade de componentes prontos para usar, responsivos e reutilizáveis.
+                </p>
+                <p><a href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4 is-flex">
+          <div class="card is-shady is-fullheight">
+            <div class="card-image has-text-centered">
+              <i class="fa fa-empire"></i>
+            </div>
+            <div class="card-content is-flex">
+              <div class="content">
+                <h3>Supabase</h3>
+                <h4>Database (PostgreSQL)</h4>
+                <p>
+                    Supabase é uma alternativa de código aberto ao Firebase que usa PostgreSQL, um sistema de gerenciamento de banco de dados relacional poderoso e de código aberto. Ele fornece uma interface de usuário intuitiva e uma API RESTful para gerenciar seu banco de dados, além de recursos de tempo real e autenticação integrada.
+                </p>
+                </p>
+                <p><a href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="column is-4 is-flex"> {% endcomment %}
+        <div class="card is-shady is-is-fullheight">
+          <div class="card-image has-text-centered">
+            <i class="fa fa-apple"></i>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <h3>Render</h3>
+              <h4>Server</h4>
+              <p>
+                  Render é uma plataforma de nuvem que permite implantar aplicativos web de maneira rápida e fácil. Ele suporta implantações automáticas a partir de repositórios Git e oferece uma variedade de serviços, como bancos de dados PostgreSQL gerenciados, armazenamento persistente e cron jobs.  
+              </p>
+              <p><a href="#">Learn more</a></p>
+            </div>
+          </div>
+        </div>
       </div>
   </div>
 </section>
