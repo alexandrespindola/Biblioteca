@@ -1,17 +1,17 @@
 {% extends 'app/base.html' %} 
 
-{% block title %} Gerenciador de Eventos {% endblock %} 
+{% block title %} Events Manager {% endblock %} 
 
 {% block content %}
 <section class="hero is-primary is-medium is-bold">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title is-1">Gerenciador de Eventos</h1>
+      <h1 class="title is-1">Event Manager</h1>
       <h2 class="subtitle is-5">
-        Aplicação web criada com Django para gerenciar e organizar eventos de forma prática e eficiente.
+        Web application created with Django to manage and organize events in a practical and efficient way.
       </h2>
       <a href="{% url 'eventos:event_list' %}" class="button is-info"
-        >Ver eventos</a
+        >View events</a
       >
     </div>
   </div>
@@ -21,7 +21,7 @@
 
 <div class="box cta">
   <p class="has-text-centered">
-    <span class="tag is-info">IMPORTANTE</span> Este projeto faz parte do Programa Match! Mastertech/IBM
+    <span class="tag is-info">IMPORTANT</span> This project is part of the Match! Mastertech/IBM Program
   </p>
 </div>
 
@@ -29,23 +29,23 @@
   <div class="columns" style="margin-top: 5rem">
     <div class="column has-text-centered">
       <h2 class="subtitle is-3">
-        Confira as tecnologias utilizadas para criar este site
+        Check out the technologies used to create this site
       </h2>
     </div>
   </div>
   <div class="columns features is-flex-wrap-wrap">
     
-    {% include "app/components/card.html" with title="Python" subtitle="Language" description="Python é uma linguagem de programação de alto nível conhecida por sua sintaxe clara e legibilidade do código. Isso torna o desenvolvimento mais rápido e eficiente. Além disso, Python tem um grande ecossistema de bibliotecas e frameworks, tornando-o uma escolha versátil para uma variedade de aplicações, desde desenvolvimento web até ciência de dados e aprendizado de máquina." logo_path='app/media/img/python.svg' logo_alt='Logo Python' %}
+    {% include "app/components/card.html" with title="Python" subtitle="Language" description="Python is a high-level programming language known for its clear syntax and code readability. This makes development faster and more efficient. In addition, Python has a large ecosystem of libraries and frameworks, making it a versatile choice for a variety of applications, from web development to data science and machine learning." logo_path='app/media/img/python.svg' logo_alt='Logo Python' %}
 
-    {% include "app/components/card.html" with title="Django" subtitle="Backend Framework" description='Django é um framework de desenvolvimento web de alto nível que incentiva o desenvolvimento rápido, o design limpo e a abordagem pragmática. Com uma arquitetura baseada em componentes reutilizáveis e uma filosofia de "baterias inclusas", o Django permite que os desenvolvedores criem aplicações robustas com menos código e em menos tempo.' logo_path='app/media/img/django.svg' logo_alt='Logo Django' %}
+    {% include "app/components/card.html" with title="Django" subtitle="Backend Framework" description='Django is a high-level web development framework that encourages rapid development, clean design, and a pragmatic approach. With a component-based architecture and a "batteries included" philosophy, Django allows developers to create robust applications with less code and in less time.' logo_path='app/media/img/django.svg' logo_alt='Logo Django' %}
 
-    {% include "app/components/card.html" with title="Bulma" subtitle="CSS Framework" description="Bulma é um framework CSS baseado em Flexbox que fornece uma variedade de componentes prontos para usar, responsivos e reutilizáveis. Com sua sintaxe fácil de entender e personalização flexível, Bulma permite que os desenvolvedores criem interfaces de usuário modernas e atraentes com facilidade e eficiência." logo_path='app/media/img/bulma.svg' logo_alt='Logo Bulma' %}
+    {% include "app/components/card.html" with title="Bulma" subtitle="CSS Framework" description="Bulma is a Flexbox-based CSS framework that provides a variety of ready-to-use, responsive, and reusable components. With its easy-to-understand syntax and flexible customization, Bulma allows developers to create modern and attractive user interfaces with ease and efficiency." logo_path='app/media/img/bulma.svg' logo_alt='Logo Bulma' %}
 
-    {% include "app/components/card.html" with title="SASS" subtitle="CSS Preprocessor" description="SASS é um pré-processador CSS que permite o uso de variáveis, funções, herança e outras características que tornam o CSS mais eficiente e fácil de manter. Além disso, o SASS oferece uma estrutura mais organizada para escrever CSS, tornando o código mais legível e fácil de manter, especialmente para projetos maiores." logo_path='app/media/img/sass.svg' logo_alt='Logo SASS' %}
+    {% include "app/components/card.html" with title="SASS" subtitle="CSS Preprocessor" description="SASS is a CSS preprocessor that allows the use of variables, functions, inheritance, and other features that make CSS more efficient and easier to maintain. In addition, SASS offers a more organized structure for writing CSS, making the code more readable and easier to maintain, especially for larger projects." logo_path='app/media/img/sass.svg' logo_alt='Logo SASS' %}
 
-    {% include "app/components/card.html" with title="Supabase" subtitle="Database (PostgreSQL)" description="Supabase é uma alternativa de código aberto ao Firebase que usa PostgreSQL, um sistema de gerenciamento de banco de dados relacional poderoso e de código aberto. Fornece uma interface de usuário intuitiva e uma API RESTful para gerenciar seu banco de dados, além de recursos de tempo real e autenticação integrada." logo_path='app/media/img/supabase.svg' logo_alt='Logo Supabase' %}
+    {% include "app/components/card.html" with title="Supabase" subtitle="Database (PostgreSQL)" description="Supabase is an open-source alternative to Firebase that uses PostgreSQL, a powerful and open-source relational database management system. It provides an intuitive user interface and a RESTful API to manage your database, in addition to real-time features and integrated authentication." logo_path='app/media/img/supabase.svg' logo_alt='Logo Supabase' %}
 
-    {% include "app/components/card.html" with title="Render" subtitle="Server" description="Render é uma plataforma de nuvem que permite implantar aplicativos web de maneira rápida e fácil. Ele suporta implantações automáticas a partir de repositórios Git e oferece uma variedade de serviços, como bancos de dados PostgreSQL gerenciados, armazenamento persistente e cron jobs." logo_path='app/media/img/render.svg' logo_alt='Logo Server' %}
+    {% include "app/components/card.html" with title="Render" subtitle="Server" description="Render is a cloud platform that allows you to deploy web applications quickly and easily. It supports automatic deployments from Git repositories and offers a variety of services, such as managed PostgreSQL databases, persistent storage, and cron jobs." logo_path='app/media/img/render.svg' logo_alt='Logo Server' %}
       </div>
   </div>
 </section>

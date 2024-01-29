@@ -1,14 +1,14 @@
 {% extends 'app/base.html' %}
 
 {% block title %}
-Confirmação de Registro
+Registration Confirmation
 {% endblock %}
 
 {% block header %}
-<h1>Registro concluído com sucesso</h1>
+<h1>Registration successfully completed</h1>
 {% endblock %}
 
 {% block content %}
-<p>Obrigado por se inscrever para o evento. Estamos ansiosos para vê-lo no evento!</p>
-<a href="{% url 'eventos:registration' %}" class="button is-primary">Voltar para a página de inscrição</a>
+<p>Thank you for signing up for the event. We look forward to seeing you at the event!</p>
+<a href="{% url 'eventos:registration' %}" class="button is-primary">Back to the registration page</a>
 {% endblock %}

@@ -61,12 +61,6 @@ html,body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .hero-body .container {
   max-width: 700px;
 }
@@ -145,7 +139,7 @@ li a[href="/eventos"]  {
 
 /* Form */
 
-inscricao__form label {
-  font-size: 1.5rem;
+label {
+  font-size: large;
 }
 

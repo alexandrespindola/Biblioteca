@@ -16,12 +16,12 @@ class ParticipantForm(forms.ModelForm):
             "time_confirmation",
         ]
         labels = {
-            "first_name": "Primeiro nome",
-            "last_name": "Sobrenome",
-            "age": "Idade",
+            "first_name": "First name",
+            "last_name": "Last name",
+            "age": "Age",
             "email": "E-mail",
-            "address": "Endereço",
-            "resides_in_sp": "Reside em SP",
-            "event": "Evento",
-            "time_confirmation": "Declaro que estou ciente de que o evento ocorrerá à noite",
+            "address": "Address",
+            "resides_in_sp": "Resides in São Paulo",
+            "event": "Event",
+            "time_confirmation": "I declare that I am aware that the event will take place at night",
         }

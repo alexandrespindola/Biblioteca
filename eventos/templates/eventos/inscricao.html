@@ -1,18 +1,22 @@
 {% extends 'app/base.html' %}
 
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Inscrever-se</button>
-</form>
-{% if error %}
-<p>{{ error }}</p>
-{% endif %}
-{% if message %}
-<p>{{ message }}</p>
-{% endif %}
-<a href="{% url 'eventos:event_list' %}" class="button is-primary">Ver eventos</a>
 
+<section class="inscricao__form is-fluid pt-6 pb-6">
+    <div class="container is-flex is-flex-direction-column is-align-items-center mt-6 mb-6 p-6">
+        <form class="pb-6" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registration</button>
+        </form>
+        {% if error %}
+        <p>{{ error }}</p>
+        {% endif %}
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+        <a href="{% url 'eventos:event_list' %}" class="button is-primary">Return to all events</a>
+    </div>
+</section>
 
 {% endblock %}

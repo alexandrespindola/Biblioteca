@@ -9,7 +9,7 @@ from .models import send_confirmation_email
 
 @transaction.atomic()
 
-# Registro de participantes
+# Participant registration
 def registration(request):
     try:
         connections['default'].ensure_connection()
@@ -19,10 +19,10 @@ def registration(request):
         form = ParticipantForm(request.POST)
         if form.is_valid():
             if Participant.objects.count() >= 50:
-                return render(request, 'eventos/inscricao.html', {'form': form, 'error': 'Infelizmente o limite de vagas para este evento está esgotado.'})
+                return render(request, 'eventos/inscricao.html', {'form': form, 'error': 'Unfortunately, the space limit for this event is sold out..'})
             participant = form.save(commit=False)
             if participant.age < 18 or not participant.resides_in_sp or not participant.time_confirmation:
-                return render(request, 'eventos/inscricao.html', {'form': form, 'error': 'Desculpe, você não preenche as condições para inscrição no evento.'})
+                return render(request, 'eventos/inscricao.html', {'form': form, 'error': 'Sorry, you do not meet the conditions to register for the event.'})
             participant.save()
 
             send_confirmation_email(participant)
@@ -32,11 +32,11 @@ def registration(request):
         form = ParticipantForm()
     return render(request, 'eventos/inscricao.html', {'form': form})
 
-# Registro completo - Sucesso
+# Complete Registration - Success
 def registration_complete(request):
     return render(request, 'eventos/registration_complete.html')
 
-# Lista de eventos
+# Event list
 def event_list(request):
     events = Event.objects.all()
     return render(request, 'eventos/event_list.html', {'events': events})

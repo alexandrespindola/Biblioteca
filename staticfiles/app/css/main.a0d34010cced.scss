@@ -62,9 +62,13 @@ html,body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+}
+
+.form.is-fluid {
+  flex-grow: 1;
 }
 
 .hero-body .container {
@@ -142,10 +146,3 @@ box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
 li a[href="/eventos"]  {
   border-bottom-style: unset !important;
 }
-
-/* Form */
-
-inscricao__form label {
-  font-size: 1.5rem;
-}
-

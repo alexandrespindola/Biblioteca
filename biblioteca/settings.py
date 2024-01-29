@@ -18,8 +18,8 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'biblioteca-pyot.onrender.com',
-    'agenciadigital.ninja',
     'spindola.engineer',
+    'prometeu.tech',
 ]
 
 
