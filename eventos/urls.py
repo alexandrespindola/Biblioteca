@@ -5,7 +5,7 @@ from . import views
 app_name = 'eventos'
 
 urlpatterns = [
-    path('inscricao/', views.registration, name='registration'),
-    path('inscricao-concluida/', views.registration_complete, name='registration_complete'),
+    path('registration/', views.registration, name='registration'),
+    path('registration-successful/', views.registration_complete, name='registration_complete'),
     path('', views.event_list, name='event_list'),
 ]

@@ -8,14 +8,13 @@
                         <div class="is-flex-grow-1">
                             <p class="title">{{ event.title }}</p>
                             <p class="subtitle has-text-weight-bold">{{ event.subtitle }}</p>
-                            <p class="subtitle mb-5">{{ event.date }} - {{ event.time }}</p>
+                            <p class="subtitle mb-5">{{ event.date|date:"F j" }} - {{ event.time }}</p>
                             <p class="subtitle m-0">City: {{ event.city }}</p>
                             <div class="content">
                                 {{ event.description }}
                             </div>
                             <p class="mb-3">Total vacancies: {{ event.vacancies_limit }}</p>
                         </div>
-                        <!-- CONTINUAR DAQUI -->
                         <a href="{% url 'eventos:registration' %}" class="button is-primary">Subscribe now</a>
                     </div>
                 </div>

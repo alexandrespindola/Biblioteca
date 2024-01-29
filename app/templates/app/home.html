@@ -1,18 +1,20 @@
 {% extends 'app/base.html' %} 
 
+{% load static %}
+
 {% block title %} Events Manager {% endblock %} 
 
 {% block content %}
 <section class="hero is-primary is-medium is-bold">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title is-1">Event Manager</h1>
+    <div class="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center is-align-content-center has-text-centered is-flex-wrap-wrap">
+      <img src="{% static 'app/media/img/logo-prometeu.svg'  %}" alt="Logo Prometeu" style="object-fit: contain; width: 200px; height: 200px">
+      <h1 class="title is-1">Prometeu.tech<br><span class="subtitle" style="font-size: 2rem">Event Manager</span></h1>
       <h2 class="subtitle is-5">
-        Web application created with Django to manage and organize events in a practical and efficient way.
+        Manage and organize events in a practical and efficient way
       </h2>
       <a href="{% url 'eventos:event_list' %}" class="button is-info"
-        >View events</a
-      >
+        >View events</a>
     </div>
   </div>
 </section>

@@ -1,14 +1,15 @@
 {% extends 'app/base.html' %}
 
 {% block title %}
-Registration Confirmation
-{% endblock %}
-
-{% block header %}
-<h1>Registration successfully completed</h1>
+Registration Successful
 {% endblock %}
 
 {% block content %}
-<p>Thank you for signing up for the event. We look forward to seeing you at the event!</p>
-<a href="{% url 'eventos:registration' %}" class="button is-primary">Back to the registration page</a>
+<section class="is-fluid is-flex is-flex-direction-column is-justify-content-center is-align-items-center" style="height: 75vh">
+    <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center" style="gap: 3rem">
+        <p class="has-text-centered">Thank you for signing up for the event.<br>
+            We look forward to seeing you at the event!</p>
+        <a href="{% url 'eventos:registration' %}" class="button is-primary">Back to the registration page</a>
+    </div>
+</section>
 {% endblock %}
