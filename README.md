@@ -1,3 +1,3 @@
-Projeto Django para conclusão do Curso Match! Mastertech IBM
+Django Project to complete the Match Course! Mastertech IBM
 
-OBS.: comecei com a ideia de criar uma biblioteca e depois alterei para gerenciador de eventos. Por isso o nome do projeto ainda segue como biblioteca! :)
+NOTE: I started with the idea of creating a library and then changed it to an event manager. That's why the name of the project still remains as "biblioteca".
