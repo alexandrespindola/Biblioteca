@@ -19,6 +19,9 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'biblioteca-pyot.onrender.com',
     'prometeu.tech',
+    'lionfish-app.ondigitalocean.app',
+
+
 ]
 
 

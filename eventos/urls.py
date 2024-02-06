@@ -4,6 +4,7 @@ from . import views
 
 app_name = 'eventos'
 
+
 urlpatterns = [
     path('registration/', views.registration, name='registration'),
     path('registration-successful/', views.registration_complete, name='registration_complete'),
