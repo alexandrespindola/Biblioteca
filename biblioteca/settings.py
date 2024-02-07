@@ -6,9 +6,6 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 
@@ -20,8 +17,6 @@ ALLOWED_HOSTS = [
     'biblioteca-pyot.onrender.com',
     'prometeu.tech',
     'lionfish-app.ondigitalocean.app',
-
-
 ]
 
 
@@ -48,9 +43,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
 ]
-
 
 ROOT_URLCONF = 'biblioteca.urls'
 
@@ -82,9 +75,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': 'postgres',
+        'USER': 'postgres.ctmxifundhwesnhkfkif',
         'PASSWORD': SUPABASE_PASSWORD,
-        'HOST': 'db.ctmxifundhwesnhkfkif.supabase.co',
+        'HOST': 'aws-0-eu-central-1.pooler.supabase.com',
         'PORT': '5432',
         'CONN_MAX_AGE': 0, 
     }
