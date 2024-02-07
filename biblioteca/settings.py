@@ -12,11 +12,16 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
+LOCALHOST = config('LOCALHOST')
+RENDER = config('RENDER')
+PROMETEU_TECH = config('PROMETEU_TECH')
+DIGITAL_OCEAN = config('DIGITAL_OCEAN')
+
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'biblioteca-pyot.onrender.com',
-    'prometeu.tech',
-    'lionfish-app.ondigitalocean.app',
+    LOCALHOST,
+    RENDER,
+    PROMETEU_TECH,
+    DIGITAL_OCEAN,
 ]
 
 
@@ -69,15 +74,18 @@ WSGI_APPLICATION = 'biblioteca.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+SUPABASE_ENGINE = config('SUPABASE_ENGINE')
+SUPABASE_USER = config('SUPABASE_USER')
 SUPABASE_PASSWORD = config('SUPABASE_PASSWORD')
+SUPABASE_HOST = config('SUPABASE_HOST')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': SUPABASE_ENGINE,
         'NAME': 'postgres',
-        'USER': 'postgres.ctmxifundhwesnhkfkif',
+        'USER': SUPABASE_USER,
         'PASSWORD': SUPABASE_PASSWORD,
-        'HOST': 'aws-0-eu-central-1.pooler.supabase.com',
+        'HOST': SUPABASE_HOST,
         'PORT': '5432',
         'CONN_MAX_AGE': 0, 
     }
